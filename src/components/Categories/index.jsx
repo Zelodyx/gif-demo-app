@@ -1,5 +1,6 @@
 import { useState } from "react"
 import CategoriesList from "./CategoriesList"
+import GifExpo from "../GifsExpo"
 
 const Categories = ({categories = [], setCategories}) =>{
 
@@ -33,6 +34,8 @@ const Categories = ({categories = [], setCategories}) =>{
         </button>
         <br />
         <CategoriesList categories={categories}/>
+        <hr />
+        <GifExpo categories={categories}/>
         </>
     )
 }
