@@ -33,7 +33,9 @@ const Categories = ({categories = [], setCategories}) =>{
         Add
         </button>
         <br />
-        <CategoriesList categories={categories}/>
+        <CategoriesList 
+        categories={categories} 
+        setCategories={setCategories}/>
         <hr />
         <GifExpo categories={categories}/>
         </>

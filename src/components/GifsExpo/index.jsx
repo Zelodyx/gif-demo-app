@@ -19,7 +19,7 @@ useEffect(
         let urlList = []
         gifs.forEach((gif)=>{
             const data = gif.data.map((item)=>{
-                return item.images.fixed_width.url
+                return item.images.fixed_width.url.split('?')[0]
             })
             urlList = [...urlList, ...data]
         })
@@ -33,15 +33,13 @@ useEffect(
     return(
         <>
             <h4>Gifs Expo</h4>
-           <ol> 
+           <div> 
             {
                 gifsList.map((url)=>(
-                    <li key={url}>
-                        {url}
-                    </li>
+                    <img key={url} src={url}/>
                 ))
             }
-            </ol>
+            </div>
         </>
         
     )
