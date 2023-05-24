@@ -19,7 +19,7 @@ useEffect(
         let urlList = []
         gifs.forEach((gif)=>{
             const data = gif.data.map((item)=>{
-                return item.images.fixed_width.url.split('?')[0]
+                return item.images.fixed_height.url.split('?')[0]
             })
             urlList = [...urlList, ...data]
         })
@@ -47,3 +47,5 @@ useEffect(
 }
 
 export default GifExpo
+
+///hacer un boton que borre toda la lista
